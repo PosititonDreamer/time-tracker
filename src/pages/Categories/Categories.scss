@@ -1,0 +1,79 @@
+.categories {
+  padding: 20px;
+
+  &__form {
+    max-width: 400px;
+    display: grid;
+    align-items: center;
+    grid-gap: 10px;
+  }
+
+  &__input {
+    font-size: 14px;
+    width: 100%;
+    padding: 5px 10px;
+    height: 30px;
+
+    &[type="color"] {
+      padding: 0;
+      height: 30px;
+      width: 30px;
+    }
+  }
+
+  &__button {
+    font-size: 14px;
+    padding: 10px;
+    width: max-content;
+    margin: 0 auto;
+
+    &--create {
+      background: #19dc19;
+    }
+
+    &--update {
+      background: #d1d13c;
+    }
+
+    &--delete {
+      background: #e37373;
+    }
+  }
+
+  &__title {
+    margin: 20px 0;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+    grid-gap: 20px;
+  }
+
+  &__item {
+    padding: 20px;
+    border: 1px solid var(--black);
+    display: grid;
+    align-items: center;
+    grid-gap: 10px;
+  }
+
+  &__color {
+    display: block;
+    height: 30px;
+    width: 30px;
+    background: var(--primary);
+  }
+
+  &__actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    grid-gap: 10px;
+
+    button {
+      margin: 0;
+    }
+  }
+}

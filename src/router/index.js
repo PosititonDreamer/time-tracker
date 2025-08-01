@@ -10,6 +10,22 @@ const routes = [
         }
     },
     {
+        name: 'Categories',
+        path: '/categories',
+        component: () => import('../pages/Categories/Categories.vue'),
+        meta: {
+            requiredAuth: true
+        }
+    },
+    {
+        name: 'History',
+        path: '/history',
+        component: () => import('../pages/History/History.vue'),
+        meta: {
+            requiredAuth: true
+        }
+    },
+    {
         path: '/',
         redirect: '/current-day'
     }

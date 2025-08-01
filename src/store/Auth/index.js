@@ -17,6 +17,7 @@ export const Auth = defineStore('Auth', () => {
                 })
 
                 user.value = auth.data
+                axios.defaults.headers.common['Authorization'] = "Bearer " + localStorage.getItem('token')
             }
         } catch (e) {
             console.log(e)
@@ -28,10 +29,6 @@ export const Auth = defineStore('Auth', () => {
         const auth = await axios.post('/users/login', {
                 login: 'Neadekvat',
                 password: 'password'
-            }, {
-                headers: {
-                    'Content-Type': 'application/json'
-                }
             }
         )
 
