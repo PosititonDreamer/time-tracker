@@ -1,0 +1,69 @@
+.current-day {
+  padding: 20px;
+
+  &__title {
+    font-size: 20px;
+    margin-bottom: 20px;
+
+    span {
+      font-weight: 700;
+      font-style: italic;
+    }
+  }
+
+  &__create {
+    margin-bottom: 10px;
+  }
+
+  &__record-form, &__item--update {
+    display: grid;
+    grid-gap: 10px;
+    max-width: 400px;
+    border: 1px solid var(--black);;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  &__input {
+    font-size: 14px;
+    width: 100%;
+    padding: 5px 10px;
+    height: 30px;
+  }
+
+  &__button, &__copy {
+    font-size: 14px;
+    padding: 10px;
+    width: max-content;
+    margin: 0 auto;
+  }
+
+
+  &__list {
+    display: grid;
+    grid-gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  &__item {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr auto;
+    max-width: 400px;
+
+    &--update {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__update {
+    font-size: 14px;
+    padding: 5px;
+    margin-left: 5px;
+  }
+
+  &__copy {
+    background: #59c859;
+  }
+}

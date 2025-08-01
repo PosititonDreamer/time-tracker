@@ -6,6 +6,8 @@
     display: grid;
     align-items: center;
     grid-gap: 10px;
+    border: 1px solid var(--black);
+    padding: 20px;
   }
 
   &__input {
