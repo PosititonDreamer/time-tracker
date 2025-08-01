@@ -26,7 +26,9 @@ router.beforeEach(async (to, from, next) => {
         const {getUser, login} = Auth()
         if(!getUser) {
             // todo: Костыль на время пока не готова авторизация
-            await login()
+            if(!localStorage.getItem('token')) {
+                await login()
+            }
             return next()
 
             // todo: Готовая проверка
