@@ -3,13 +3,12 @@
 @import url("_generic.scss");
 
 html, body {
-  overflow: hidden;
+  overflow: hidden auto;
   font-family: "Inter", sans-serif;
   font-weight: 400;
 }
 
 #app {
   width: 100vw;
-  height: 100vh;
-  overflow: hidden auto;
+  min-height: 100vh;
 }
