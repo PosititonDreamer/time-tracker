@@ -25,9 +25,9 @@ export default {
 
     const recordUpdate = ref(null)
 
-    const submitCreateRecord = () => {
+    const submitCreateRecord = async () => {
       if(record.value.title.trim().length ){
-        const create  = createRecord({
+        const create  = await createRecord({
           category_id: record.value.category_id,
           title: record.value.title,
         })
@@ -40,9 +40,9 @@ export default {
       }
     }
 
-    const submitRecordUpdate = () => {
+    const submitRecordUpdate = async () => {
       if(recordUpdate.value.title.trim().length ){
-        const update  = updateRecord({
+        const update  = await updateRecord({
           category_id: recordUpdate.value.category_id,
           title: recordUpdate.value.title,
           id: recordUpdate.value.id,

@@ -18,9 +18,9 @@ import {Categories} from "../../store/Categories/index.js";
 
       const categoryUpdate = ref(null)
 
-      const submitCreate = () => {
+      const submitCreate = async () => {
         if(category.value.title.trim().length){
-          const create = createCategory({
+          const create = await createCategory({
             title: category.value.title,
             color: category.value.color,
           })
@@ -34,9 +34,9 @@ import {Categories} from "../../store/Categories/index.js";
         }
       }
 
-      const submitUpdate = () => {
+      const submitUpdate = async () => {
         if(categoryUpdate.value.title.trim().length){
-          const update = updateCategory({
+          const update = await updateCategory({
             title: categoryUpdate.value.title,
             color: categoryUpdate.value.color,
             id: categoryUpdate.value.id,
