@@ -79,7 +79,7 @@
 
 <template>
   <div class="accordion">
-    <div class="accordion__header" @click.stop="openAccordion">
+    <div :class="['accordion__header', {'accordion__header--disabled': open}]" @click.stop="openAccordion">
       <div class="accordion__title">{{data.title}}</div>
       <div :class="['accordion__symbol', {'accordion__symbol--open': opened}]">
         <span></span>
