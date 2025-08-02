@@ -23,11 +23,9 @@
 <template>
   <div class="history">
     <div class="history__list">
-      <Accordion v-for="year in getHistory" :data="year" :key="`year-${year}`" :open="getHistory.length === 1"/>
+      <Accordion class="history__accordion" v-for="year in getHistory" :data="year" :key="`year-${year}`" :open="getHistory.length === 1"/>
     </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" src="./History.scss" scoped />
